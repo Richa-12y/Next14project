@@ -1,5 +1,5 @@
 .conatiner {
-  background-color: aqua;
+  background-color: var(--bg);
   height: 100px;
   display: flex;
   align-items: center;
