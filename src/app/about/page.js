@@ -4,10 +4,12 @@ import styles from "./about.module.css";
 
 const AboutPage = () => {
   return (
-    <div>
-      <div className={styles.imageContainer}>
-        <Image src="/about.png" width={500} height={500} fill />
+    <div className={styles.conatiner}>
+      <div className={styles.textContainer}>
+        <h2>About Agency</h2>
+        <h1>We create digital ideas that a bigger,bolder,brave and better</h1>
       </div>
+      <div className={styles.imageContainer}></div>
     </div>
   );
 };
