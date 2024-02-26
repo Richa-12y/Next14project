@@ -25,7 +25,8 @@
   border-radius: 5px;
   border: none;
   outline: none;
-  background-color: var(--bgSoft);
+  /* background-color: var(--bgSoft); */
+  background-color: #5c5860;
   color: var(--text);
 }
 
