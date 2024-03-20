@@ -3,7 +3,7 @@ import styles from "./postCard.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-const PostCard = () => {
+const PostCard = ({ post }) => {
   return (
     <div className={styles.container}>
       <div className={styles.top}>
@@ -18,16 +18,8 @@ const PostCard = () => {
       </div>
       <span className={styles.date}>01.01.2024</span>
       <div className={styles.bottom}>
-        <h1 className={styles.title}>
-          Lorem Ipsum is that it has a more-or-less
-        </h1>
-        <p className={styles.desc}>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using Content here, content making it look like
-          readable English.
-        </p>
+        <h1 className={styles.title}>{post?.title}</h1>
+        <p className={styles.desc}>{post?.body}</p>
         <Link href="/blog/post" className={styles.link}>
           READ MORE
         </Link>

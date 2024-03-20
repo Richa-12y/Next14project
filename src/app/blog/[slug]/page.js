@@ -2,7 +2,18 @@ import React from "react";
 import styles from "./singlePost.module.css";
 import Image from "next/image";
 
-const SinglePage = () => {
+const getData = async () => {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+
+  if (!res.ok) {
+    throw new Error("Something went wrong");
+  }
+  return res.json();
+};
+const SinglePage = async () => {
+  // console.log(params, searchParams);
+  const posts = await getData();
+
   return (
     <div className={styles.conatiner}>
       <div className={styles.imgContainer}>
